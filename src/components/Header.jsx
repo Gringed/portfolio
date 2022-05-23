@@ -4,6 +4,7 @@ import styled from "styled-components";
 const PrimaryColor = "#90be3e";
 const SecondaryColor = "#4e4f50";
 const TertiaryColor = "#18191a";
+const White = "whitesmoke";
 
 const Navbar = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ const NavList = styled.div`
   flex: 1;
   padding: 10px;
 `;
-const ItemList = styled.div`
+const ItemList = styled.a`
   width: 120px;
   height: 50px;
   border-top: 2px solid ${SecondaryColor};
@@ -40,6 +41,9 @@ const ItemList = styled.div`
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  color: ${White};
   &:hover {
     transform: translateY(3px);
     background: ${PrimaryColor};
@@ -53,10 +57,10 @@ export const Header = () => {
     <Navbar>
       <Title>Gring{'{ed}'}</Title>
       <NavList>
-        <ItemList>A propos</ItemList>
-        <ItemList>Services</ItemList>
-        <ItemList>Projets</ItemList>
-        <ItemList>Contact</ItemList>
+        <ItemList href="#About">A propos</ItemList>
+        <ItemList href="#Services">Services</ItemList>
+        <ItemList href="#Projects">Projets</ItemList>
+        <ItemList href="#Contact">Contact</ItemList>
       </NavList>
     </Navbar>
   );

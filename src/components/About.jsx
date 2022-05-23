@@ -11,6 +11,7 @@ const Container = styled.div`
   width: 100%;
   flex-direction: column;
   border-bottom: 5px solid ${SecondaryColor};
+  
 `
 const Title = styled.h1`
   display: flex;
@@ -68,7 +69,7 @@ const Important = styled.span`
 
 export const About = () => {
   return (
-    <Container>
+    <Container id='About'>
       <Title>Qui suis-je ?</Title>
       <Section>
         <Info>
