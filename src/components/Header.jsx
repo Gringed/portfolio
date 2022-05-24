@@ -44,8 +44,15 @@ const Button = styled.button`
     color: white;
   }
 `
-const MenuItem = styled.a`
 
+const MenuItem = styled.a`
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  background: ${TertiaryColor};
+  font-family: "Fredoka One", sans-serif;
+  color: ${White};
+  text-decoration: none;
 `
 
 const ItemList = styled.a`

@@ -61,6 +61,9 @@ const Presentation = styled.div`
     text-align: justify;
     font-weight: 600;
     color: ${White};
+    @media (min-width: 250px) and (max-width: 425px) {
+    font-size: 15px;
+  }
 `;
 
 const Span = styled.span`

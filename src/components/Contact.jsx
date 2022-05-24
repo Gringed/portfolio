@@ -1,4 +1,4 @@
-import { Call, GitHub, LinkedIn } from "@mui/icons-material";
+import { Call, GitHub, LinkedIn, Mail } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 
@@ -54,9 +54,6 @@ const TitleRzo = styled.h1`
   font-size: 20px;
 `;
 
-const Discord = styled.img`
-  width: 80px;
-`;
 export const Contact = () => {
   return (
     <Container id="Contact">
@@ -74,11 +71,11 @@ export const Contact = () => {
           </Lien>
         </Reseau>
         <Reseau>
-          <Lien href="https://discord.gg/yaECrPmNWn" target="_blank">
+          <Lien href="mailto:contact@devengine.net" target="_blank">
             <Icon>
-              <Discord src="portfolio/img/discord.svg" />
+              <Mail sx={{ fontSize: "5rem" }}/>
             </Icon>
-            <TitleRzo>Discord</TitleRzo>
+            <TitleRzo>Mail</TitleRzo>
           </Lien>
         </Reseau>
         <Reseau>
