@@ -16,6 +16,12 @@ const Background = styled.div`
     flex-direction: column;
     height: auto;
   }
+  @media (min-width: 250px) and (max-width: 425px) {
+    padding-top: 25%;
+  }
+  @media (min-width: 426px) and (max-width: 1024px) {
+    padding-top: 10%;
+  }
 `;
 const Mascotte = styled.div`
   display: flex;

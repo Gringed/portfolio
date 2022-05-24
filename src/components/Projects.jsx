@@ -44,9 +44,6 @@ const ProjetHover = styled.a`
   color: ${White};
   padding: 10px;
   transition: all 0.2s ease-in;
-  &:hover{
-    opacity: 0.7;
-  }
   &:hover>h1{
     color: ${PrimaryColor};
     transition: all 0.2s ease-in;

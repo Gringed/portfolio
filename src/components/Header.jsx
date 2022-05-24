@@ -15,12 +15,18 @@ const Navbar = styled.div`
   height: 100px;
   color: ${PrimaryColor};
   font-family: "Fredoka One", sans-serif;
+  position: fixed;
+  background: ${TertiaryColor};
 `;
-const Title = styled.h1`
+const Title = styled.a`
   padding: 10px;
   display: flex;
   justify-content: center;
   flex: 1;
+  color: ${PrimaryColor};
+  font-size: 35px;
+  font-weight: 600;
+  text-decoration: none;
   transition: all 0.2s ease-in;
   &:hover{
       transform: scale(1.1);
@@ -88,7 +94,7 @@ export const Header = () => {
   };
   return (
     <Navbar>
-      <Title>Gring{'{ed}'}</Title>
+      <Title href="#Top">Gring{'{ed}'}</Title>
       <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
