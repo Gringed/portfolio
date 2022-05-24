@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const PrimaryColor = "#90be3e";
-const SecondaryColor = "#4e4f50";
 const TertiaryColor = "#18191a";
 const White = "whitesmoke";
 
@@ -13,6 +12,10 @@ const Background = styled.div`
   display: flex;
   background-size: cover;
   border-bottom: 5px solid ${PrimaryColor};
+  @media (min-width: 250px) and (max-width: 950px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 const Mascotte = styled.div`
   display: flex;
@@ -20,9 +23,16 @@ const Mascotte = styled.div`
   width: 80%;
   height: 80%;
   justify-content: center;
+  @media (min-width: 250px) and (max-width: 950px) {
+    width: 100%;
+  }
 `;
 const Image = styled.img`
   object-fit: none;
+  @media (min-width: 250px) and (max-width: 950px) {
+    object-fit: contain;
+    width: 50%;
+  }
 `;
 const Introduction = styled.div`
   display: flex;
@@ -33,6 +43,9 @@ const Introduction = styled.div`
   height: 80%;
   font-family: "Fredoka One", sans-serif;
   color: whitesmoke;
+  @media (min-width: 250px) and (max-width: 950px) {
+    margin: 0 20px 20px 20px;
+  }
 `;
 const Title = styled.h1`
     font-size: 25px;

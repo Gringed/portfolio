@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const PrimaryColor = "#90be3e";
-const SecondaryColor = "#4e4f50";
-const TertiaryColor = "#18191a";
 const White = "whitesmoke";
 
 const Container = styled.div`
@@ -27,6 +25,10 @@ const List = styled.ul`
     padding: 50px;
     width: 100%;
     align-items: center;
+    @media (min-width: 250px) and (max-width: 768px) {
+    padding: 0;
+    margin: 10px;
+  }
 `
 const ListItem = styled.li`
     list-style: none;
@@ -35,6 +37,10 @@ const ListItem = styled.li`
     justify-content: space-around;
     align-items: center;
     width: 60%;
+    @media (min-width: 250px) and (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 const Icon = styled.div`
     border: 2px solid ${PrimaryColor};
@@ -47,6 +53,12 @@ const Icon = styled.div`
     align-items: center;
     font-size: 50px;
     font-family: "Fredoka One", sans-serif;
+    @media (min-width: 250px) and (max-width: 600px) {
+    height: 30%;
+  }
+  @media (min-width: 601px) and (max-width: 768px) {
+    height: 45%;
+  }
 `
 
 const Item = styled.div`

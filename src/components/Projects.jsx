@@ -25,12 +25,19 @@ const Bloc = styled.div`
   justify-content: space-around;
   margin: 50px 0;
   flex-wrap: wrap;
+  @media (min-width: 250px) and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const Projet = styled.div`
   width: 35%;
   display: flex;
   flex-direction: column;
   margin: 30px 0;
+  @media (min-width: 250px) and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const ProjetHover = styled.a`
   text-decoration: none;
@@ -66,7 +73,7 @@ export const Projects = () => {
       <Bloc>
         <Projet>
           <ProjetHover href="https://www.devengine.net/fr_FR" target="_blank">
-            <Image src="./img/de.png" />
+            <Image src="portfolio/img/de.png" />
             <TitleProjet>Dev Engine</TitleProjet>
             <Description>
               Envie de fonder mon entreprise dans le développement web, j'ai moi
@@ -77,7 +84,7 @@ export const Projects = () => {
         </Projet>
         <Projet>
           <ProjetHover href="https://www.auxcorbeauxdodin.fr" target="_blank">
-            <Image src="./img/acdo.png" />
+            <Image src="portfolio/img/acdo.png" />
             <TitleProjet>Aux Corbeaux d'Odin</TitleProjet>
             <Description>
               Site vitrine d'un bar/taverne ayant pour activité le lancer de haches (si si, et c'est top pour se défouler). Technos utilisées pour celui ci : HTML | CSS | JS.
@@ -86,7 +93,7 @@ export const Projects = () => {
         </Projet>
         <Projet>
           <ProjetHover href="https://gringed.github.io/e-commerce_Project/" target="_blank">
-            <Image src="./img/mooney.png" />
+            <Image src="portfolio/img/mooney.png" />
             <TitleProjet>Mooney</TitleProjet>
             <Description>
               Prototype de site e-commerce sous React, actuellement en phase de développement je rajouterais les technos utilisées par la suite.
@@ -95,7 +102,7 @@ export const Projects = () => {
         </Projet>
         <Projet>
           <ProjetHover href="https://gringed.github.io/ReseauSocialV2" target="_blank">
-            <Image src="./img/se.png" />
+            <Image src="portfolio/img/se.png" />
             <TitleProjet>Social Engine (BETA)</TitleProjet>
             <Description>
               Un réseau social sous React avec comme autres technos : NodeJs | Express | Redux | MongoDB | Sass. (Repris du projet finale de ma formation)

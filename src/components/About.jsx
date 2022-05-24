@@ -11,7 +11,6 @@ const Container = styled.div`
   width: 100%;
   flex-direction: column;
   border-bottom: 5px solid ${SecondaryColor};
-  
 `
 const Title = styled.h1`
   display: flex;
@@ -26,6 +25,10 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 250px) and (max-width: 950px) {
+    flex-direction: column;
+    height: auto;
+  }
 `
 
 const Info = styled.div`
@@ -36,6 +39,10 @@ const Info = styled.div`
   display: flex;
   text-align: justify;
   flex-direction: column;
+  @media (min-width: 250px) and (max-width: 950px) {
+    width: 90%;
+    padding: 0;
+  }
 `
 
 const Paragraphe = styled.p`
@@ -44,6 +51,9 @@ const Paragraphe = styled.p`
   width: 100%;
   display: flex;
   text-align: justify;
+  @media (min-width: 250px) and (max-width: 950px) {
+    font-size: 20px;
+  }
 `
 
 const Divider = styled.hr`
@@ -52,6 +62,9 @@ const Divider = styled.hr`
   border-left: 35px solid ${PrimaryColor};
   border-right: 35px solid ${SecondaryColor};
   border-bottom: 1px solid ${TertiaryColor};
+  @media (min-width: 250px) and (max-width: 950px) {
+    width: 75%;
+  }
 `
 
 const Image = styled.img`
@@ -60,6 +73,10 @@ const Image = styled.img`
   object-fit: cover;
   display: flex;
   padding: 30px;
+  @media (min-width: 250px) and (max-width: 950px) {
+    width: 50%;
+    height: 50%;
+  }
 `
 
 const Important = styled.span`
@@ -97,7 +114,7 @@ export const About = () => {
             Back-end.
           </Paragraphe>
         </Info>
-        <Image src="./img/leaf.svg" />
+        <Image src="portfolio/img/leaf.svg" />
       </Section>
     </Container>
   )

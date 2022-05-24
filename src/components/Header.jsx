@@ -1,4 +1,6 @@
-import React from "react";
+import { DragHandle } from "@mui/icons-material";
+import { Menu } from "@mui/material";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const PrimaryColor = "#90be3e";
@@ -28,7 +30,24 @@ const NavList = styled.div`
   display: flex;
   flex: 1;
   padding: 10px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
+const Button = styled.button`
+  display: none;
+  @media (min-width: 320px) and (max-width: 768px) {
+    display: flex;
+    margin: 10px;
+    background: none;
+    border: none;
+    color: white;
+  }
+`
+const MenuItem = styled.a`
+
+`
+
 const ItemList = styled.a`
   width: 120px;
   height: 50px;
@@ -41,7 +60,6 @@ const ItemList = styled.a`
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  scroll-behavior: smooth;
   text-decoration: none;
   color: ${White};
   &:hover {
@@ -53,9 +71,40 @@ const ItemList = styled.a`
 `;
 
 export const Header = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Navbar>
       <Title>Gring{'{ed}'}</Title>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        <DragHandle sx={{fontSize: "3rem"}}/>
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleClose} href="#About">A propos</MenuItem>
+        <MenuItem onClick={handleClose} href="#Services">Services</MenuItem>
+        <MenuItem onClick={handleClose} href="#Projects">Projets</MenuItem>
+        <MenuItem onClick={handleClose} href="#Contact">Contact</MenuItem>
+      </Menu>
       <NavList>
         <ItemList href="#About">A propos</ItemList>
         <ItemList href="#Services">Services</ItemList>

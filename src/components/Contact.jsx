@@ -76,7 +76,7 @@ export const Contact = () => {
         <Reseau>
           <Lien href="https://discord.gg/yaECrPmNWn" target="_blank">
             <Icon>
-              <Discord src="./img/discord.svg" />
+              <Discord src="portfolio/img/discord.svg" />
             </Icon>
             <TitleRzo>Discord</TitleRzo>
           </Lien>
