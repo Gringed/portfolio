@@ -44,7 +44,7 @@ const ProjetHover = styled.a`
   color: ${White};
   padding: 10px;
   transition: all 0.2s ease-in;
-  &:hover>h1{
+  &:hover > h1 {
     color: ${PrimaryColor};
     transition: all 0.2s ease-in;
   }
@@ -62,20 +62,17 @@ const Description = styled.p`
   text-align: justify;
 `;
 
-
 export const Projects = () => {
   return (
     <Container id="Projects">
       <Title>Mes projets</Title>
       <Bloc>
         <Projet>
-          <ProjetHover href="https://www.devengine.net/fr_FR" target="_blank">
+          <ProjetHover href="/">
             <Image src="portfolio/img/de.png" />
             <TitleProjet>Dev Engine</TitleProjet>
             <Description>
-              Envie de fonder mon entreprise dans le développement web, j'ai moi
-              même fais mon site avec l'aide d'un collaborateur pour un projet
-              commun, je vous invite à aller le visiter.
+              Tout simplement mon portfolio sous React avec aussi StyledComponents.
             </Description>
           </ProjetHover>
         </Projet>
@@ -84,25 +81,35 @@ export const Projects = () => {
             <Image src="portfolio/img/acdo.png" />
             <TitleProjet>Aux Corbeaux d'Odin</TitleProjet>
             <Description>
-              Site vitrine d'un bar/taverne ayant pour activité le lancer de haches (si si, et c'est top pour se défouler). Technos utilisées pour celui ci : HTML | CSS | JS.
+              Site vitrine d'un bar/taverne ayant pour activité le lancer de
+              haches (si si, et c'est top pour se défouler). Technos utilisées
+              pour celui ci : HTML | CSS | JS.
             </Description>
           </ProjetHover>
         </Projet>
         <Projet>
-          <ProjetHover href="https://gringed.github.io/e-commerce_Project/" target="_blank">
+          <ProjetHover
+            href="https://gringed.github.io/e-commerce_Project/"
+            target="_blank"
+          >
             <Image src="portfolio/img/mooney.png" />
-            <TitleProjet>Mooney</TitleProjet>
+            <TitleProjet>Mooney (en cours de développement)</TitleProjet>
             <Description>
-              Prototype de site e-commerce sous React, actuellement en phase de développement je rajouterais les technos utilisées par la suite.
+              Prototype de site e-commerce sous React, actuellement en phase de
+              développement j'utilise les technos suivantes : React | Node.js | MongoDB | Express | Redux | StyledComponents.
             </Description>
           </ProjetHover>
         </Projet>
         <Projet>
-          <ProjetHover href="https://gringed.github.io/ReseauSocialV2" target="_blank">
-            <Image src="portfolio/img/se.png" />
-            <TitleProjet>Social Engine (BETA)</TitleProjet>
+          <ProjetHover
+            href="https://devengine.net/projects/Taska/"
+            target="_blank"
+          >
+            <Image src="portfolio/img/tk.png" />
+            <TitleProjet>Taska</TitleProjet>
             <Description>
-              Un réseau social sous React avec comme autres technos : NodeJs | Express | Redux | MongoDB | Sass. (Repris du projet finale de ma formation)
+              Site vitrine d'un bar café situé à Genève. Technos utilisées
+              pour celui ci : HTML | CSS | JS.
             </Description>
           </ProjetHover>
         </Projet>

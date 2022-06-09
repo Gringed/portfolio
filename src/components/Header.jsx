@@ -94,7 +94,7 @@ export const Header = () => {
   };
   return (
     <Navbar>
-      <Title href="#Top">Gring{'{ed}'}</Title>
+      <Title href="#Top">{'{Dev}'} Engine</Title>
       <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
